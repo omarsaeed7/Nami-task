@@ -18,7 +18,7 @@ Ensure you have the following installed:
 
 ```bash
    git clone git@github.com:omarsaeed7/Nami-task.git
-   cd task
+   cd nami-task/task
 ```
 
 2. Install Dependencies
@@ -36,6 +36,7 @@ php artisan key:generate
 php artisan storage:link
 
 ```
+- Edit .env for database username and password based on your setup
 
 4. Database migration and seeding
 
