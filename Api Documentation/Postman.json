@@ -1,0 +1,156 @@
+{
+  "info": {
+    "name": "Nami",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept-Language",
+            "value": "ar",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/admin/login",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1:8000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "login"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\":\"admin@example.com\",\n  \"password\":\"password123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "{{token}}",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/admin/logout",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1:8000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "logout"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Profile",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/admin/profile",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1:8000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "profile"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Refresh Token",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/admin/refresh",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1:8000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "refresh"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
